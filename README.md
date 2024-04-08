@@ -24,18 +24,20 @@ $npm run dev
 
 ## Requirements
 
-- Flask==3.0.3
-- CORS==4.0.0
-- gensim==4.3.2
-- keras==3.1.1
-- matplotlib==3.7.2
-- networkx==2.8.8
-- node2vec==0.4.6
-- numpy==1.25.2
-- pandas==2.0.3
-- scikit_learn==1.3.2
-- stellargraph==1.3.0b0
-- tqdm==4.64.1
+- setuptools
+- Flask
+- CORS
+- numpy
+- gensim
+- keras
+- matplotlib
+- networkx
+- node2vec
+- pandas
+- git+https://github.com/VenkateshwaranB/stellargraph.git
+- scikit_learn
+- tqdm
+
 
 ## Project Structure
 
