@@ -15,7 +15,8 @@ This project uses the Feed-Forward Neural Network (FFNN) and Graph Embeddings. T
 $pip install -r requirements.txt
 $python main.py listen
 ```
-3. Go to the interface folder and run the below code. This will run the interface you can test the model.
+3. Unzip inference.zip
+4. Go to the interface folder and run the below code. This will run the interface you can test the model.
 ```
 $npm i
 $npm run dev
@@ -120,6 +121,8 @@ python main.py train
 ```
 
 ## **Inference server**
+
+1. Unzip inference.zip and run the app with npm.
 This project includes a server that can be used for inference. The server is implemented in Flask and exposes a `/predict` endpoint that accepts POST requests with the data to predict.
 
 The server is started by running the `main.py` script with the `listen` command. When the server is started, it loads the trained model from the `.h5` file.
