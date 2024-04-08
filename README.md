@@ -142,8 +142,14 @@ The server uses the trained model to predict the fee for the given node and oper
     "fee": predicted_fee
 }
 ```
-
 The predicted_fee is the predicted fee for the given node and operational overheads.
 
 To start the server, run the following command:
 python main.py listen
+
+## **Future updates**
+
+1. Data clustering for tiered fee detection
+2. Training the model using all block information rather than 1 month of history.
+3. Crafting more features increase the accuracy of the model.
+
