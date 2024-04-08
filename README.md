@@ -1,9 +1,22 @@
 # NoahAI
 
+A machine learning approach for calculating the transaction fees based on the block history. We analyse all transaction history using a network analysis approach to find patterns of relationships between data points and use this relationship together with current operational overhead on the data using read/write/execution counts to train an efficient Neural Network model that can to fast prediction over the price.
+
 ```markdown
 
-
 This project uses the Feed-Forward Neural Network (FFNN) and Graph Embeddings. The project consists of several Python scripts and modules.
+## Basic requirements
+1. Python 3.10 or higher
+2. Node.js
+3. Virtual environment(recommended)
+## Basic steps for installation and running
+1. From the terminal go to the root folder of the project and install requirements then run the model. This code will run the  AI-powered server on port 5000.
+$pip install -r requirements.txt
+$python main.py listen
+2. Go to the interface folder and run the below code. This will run the interface you can test the model.
+$npm i
+$npm run dev
+3. When you are at the web interface load the 'meta_data.csv'. This will list all data points and their operations. Then select any one of the data points and hit the calculate button. The calculate button sends a request to AI to calculate the estimated transaction fee.
 
 ## Requirements
 
@@ -99,8 +112,8 @@ To start the training process, run the following command:
 ```bash
 python main.py train
 
-## Inference server
-This project includes a Flask server that can be used for inference. The server exposes a `/predict` endpoint that accepts POST requests with the data to predict.
+## **Inference server**
+This project includes a server that can be used for inference. The server is implemented in Flask and exposes a `/predict` endpoint that accepts POST requests with the data to predict.
 
 The server is started by running the `main.py` script with the `listen` command. When the server is started, it loads the trained model from the `.h5` file.
 
@@ -108,12 +121,21 @@ The `/predict` endpoint expects a JSON object in the request body with the follo
 
 ```json
 {
-    "predict": [node_id],
-    "s": [number]
-    "r": [number]
-    "w": [number]
-    "x": [number]
+    "predict": [node_id, s, r, w, x]
 }
 
 ```
+Where:
 
+node_id is the ID of the node for which to predict the fee.
+s, r, w, and x are the operational overheads on the data (read/write/execution counts).
+The server uses the trained model to predict the fee for the given node and operational overheads. The prediction is returned as a JSON object with the following format:
+
+{
+    "fee": predicted_fee
+}
+
+The predicted_fee is the predicted fee for the given node and operational overheads.
+
+To start the server, run the following command:
+python main.py listen
