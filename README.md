@@ -10,7 +10,10 @@ This project uses the Feed-Forward Neural Network (FFNN) and Graph Embeddings. T
 2. Node.js
 3. Virtual environment(recommended)
 ## Basic steps for installation and running
-1. From the terminal go to the root folder of the project and install requirements then run the model. This code will run the  AI-powered server on port 5000.
+1. Download the training data from the drive and unzip it in the project folder. File path should be looking like project structure.
+https://drive.google.com/drive/folders/1rLVkIPmXMxfH5UXkxEusyxKBz6B6tj5_?usp=sharing
+
+3. From the terminal go to the root folder of the project and install requirements then run the model. This code will run the  AI-powered server on port 5000.
 ```
 $pip install -r requirements.txt
 $python main.py listen
@@ -41,7 +44,25 @@ $npm run dev
 
 
 ## Project Structure
-
+.
+├── main.py
+├── app.py
+├── functions.py
+├── graph_embeddings.py
+├── blocks_parsed
+│   ├── block1
+│   ├── block2
+│   └── ...
+├── graph_embeddings.emb
+├── data.pkl
+├── best_model.keras
+├── meta_data.csv
+├── requirements.txt
+├── README.md
+└── .gitignore
+├── interface
+│   ├── src
+│   └── ...
 ## Training and running machine learning
 
 - `main.py`: The main script of the project. It trains the FFNN and Graph Embeddings on a dataset, predicts fees on a test dataset, and saves the results to a CSV file. It also starts a Flask server if the `listen` command is passed.
