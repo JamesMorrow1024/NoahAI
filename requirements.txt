@@ -1,0 +1,13 @@
+setuptools
+Flask
+CORS
+numpy
+gensim
+keras
+matplotlib
+networkx
+node2vec
+pandas
+git+https://github.com/VenkateshwaranB/stellargraph.git
+scikit_learn
+tqdm
