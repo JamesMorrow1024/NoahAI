@@ -2,7 +2,7 @@
 
 A machine learning approach for calculating the transaction fees based on the block history. We analyse all transaction history using a network analysis approach to find patterns of relationships between data points and use this relationship together with current operational overhead on the data using read/write/execution counts to train an efficient Neural Network model that can to fast prediction over the price.
 
-```markdown
+
 
 This project uses the Feed-Forward Neural Network (FFNN) and Graph Embeddings. The project consists of several Python scripts and modules.
 ## Basic requirements
@@ -11,12 +11,16 @@ This project uses the Feed-Forward Neural Network (FFNN) and Graph Embeddings. T
 3. Virtual environment(recommended)
 ## Basic steps for installation and running
 1. From the terminal go to the root folder of the project and install requirements then run the model. This code will run the  AI-powered server on port 5000.
+```
 $pip install -r requirements.txt
 $python main.py listen
-2. Go to the interface folder and run the below code. This will run the interface you can test the model.
+```
+3. Go to the interface folder and run the below code. This will run the interface you can test the model.
+```
 $npm i
 $npm run dev
-3. When you are at the web interface load the 'meta_data.csv'. This will list all data points and their operations. Then select any one of the data points and hit the calculate button. The calculate button sends a request to AI to calculate the estimated transaction fee.
+```
+5. When you are at the web interface load the 'meta_data.csv'. This will list all data points and their operations. Then select any one of the data points and hit the calculate button. The calculate button sends a request to AI to calculate the estimated transaction fee.
 
 ## Requirements
 
@@ -46,7 +50,7 @@ tqdm==4.64.1
 
 You can run the main script from the command line with the following command:
 
-```bash
+```
 python main.py <command>
 ```
 
