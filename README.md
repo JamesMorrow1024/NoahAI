@@ -53,9 +53,9 @@ python main.py <command>
 Replace `<command>` with one of the following commands:
 
 - `train`: Trains the FFNN and Graph Embeddings on the dataset and saves the results to a CSV file.
-- `listen`: Starts a inference server on `localhost:5000`.
+- `listen`: Starts an inference server on `localhost:5000`.
 
-## Data
+## Files
 
 ## Embedding file
 
@@ -110,7 +110,7 @@ The training process is initiated by running the `main.py` script with the `trai
 To start the training process, run the following command:
 
 ```bash
-python main.py train
+python main.py train ```
 
 ## **Inference server**
 This project includes a server that can be used for inference. The server is implemented in Flask and exposes a `/predict` endpoint that accepts POST requests with the data to predict.
