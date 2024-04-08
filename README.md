@@ -44,25 +44,24 @@ $npm run dev
 
 
 ## Project Structure
-.
-├── main.py
-├── app.py
-├── functions.py
-├── graph_embeddings.py
-├── blocks_parsed
-│   ├── block1
-│   ├── block2
-│   └── ...
-├── graph_embeddings.emb
-├── data.pkl
-├── best_model.keras
-├── meta_data.csv
-├── requirements.txt
-├── README.md
-└── .gitignore
-├── interface
-│   ├── src
-│   └── ...
+├── main.py  
+├── app.py  
+├── functions.py  
+├── graph_embeddings.py  
+├── blocks_parsed  
+│   ├── block1  
+│   ├── block2  
+│   └── ...  
+├── graph_embeddings.emb  
+├── data.pkl  
+├── best_model.keras  
+├── meta_data.csv  
+├── requirements.txt  
+├── README.md  
+└── .gitignore  
+├── interface  
+│   ├── src  
+│   └── ...  
 ## Training and running machine learning
 
 - `main.py`: The main script of the project. It trains the FFNN and Graph Embeddings on a dataset, predicts fees on a test dataset, and saves the results to a CSV file. It also starts a Flask server if the `listen` command is passed.
