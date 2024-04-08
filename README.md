@@ -135,10 +135,11 @@ Where:
 node_id is the ID of the node for which to predict the fee.
 s, r, w, and x are the operational overheads on the data (read/write/execution counts).
 The server uses the trained model to predict the fee for the given node and operational overheads. The prediction is returned as a JSON object with the following format:
-
+```
 {
     "fee": predicted_fee
 }
+```
 
 The predicted_fee is the predicted fee for the given node and operational overheads.
 
