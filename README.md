@@ -110,7 +110,8 @@ The training process is initiated by running the `main.py` script with the `trai
 To start the training process, run the following command:
 
 ```bash
-python main.py train ```
+python main.py train 
+```
 
 ## **Inference server**
 This project includes a server that can be used for inference. The server is implemented in Flask and exposes a `/predict` endpoint that accepts POST requests with the data to predict.
